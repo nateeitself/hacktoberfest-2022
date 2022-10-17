@@ -1,17 +1,20 @@
 public class Main {
 
-    public void helloWorld() {
-        System.out.println("Hello World!");
-    }
-
+    // program to check if a number is prime or not
     public static void main(String[] args) {
-        // hacktoberfest 2022
+        int num = 29;
+        boolean flag = false;
+        for (int i = 2; i <= num / 2; ++i) {
+            // condition for nonprime number
+            if (num % i == 0) {
+                flag = true;
+                break;
+            }
+        }
 
-        // create a new instance of the class
-        Main main = new Main();
-
-        // call the method
-        main.helloWorld();
-
+        if (!flag)
+            System.out.println(num + " is a prime number.");
+        else
+            System.out.println(num + " is not a prime number.");
     }
 }
